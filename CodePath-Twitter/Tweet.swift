@@ -40,20 +40,20 @@ class Tweet: NSObject {
             }
         }
         
-        isRetweeted = dictionary["retweeted"] as! Bool
-        if let retweetedStatusDict = dictionary["retweeted_status"] as? NSDictionary {
-            retweetedStatusIsEmpty = false
-            retweetedStatusId = retweetedStatusDict["id_str"] as! String
-        }
-        isFavorited = dictionary["favorited"] as! Bool
-        
-        retweetCount = (dictionary["retweet_count"] as? Int) ?? 0 // If this doesnt exist then set it to 0 since nil on Int is invalid
-        favoriteCount = (dictionary["favourite_count"] as? Int) ?? 0
-        
         // current_user used to push existing user into the Model Tweet
         if dictionary["user"] == nil {
             user = User.currentUser
         } else {
+            isRetweeted = (dictionary["retweeted"] as? Bool)!
+            if let retweetedStatusDict = dictionary["retweeted_status"] as? NSDictionary {
+                retweetedStatusIsEmpty = false
+                retweetedStatusId = retweetedStatusDict["id_str"] as! String
+            }
+            isFavorited = (dictionary["favorited"] as? Bool)!
+            
+            retweetCount = (dictionary["retweet_count"] as? Int) ?? 0 // If this doesnt exist then set it to 0 since nil on Int is invalid
+            favoriteCount = (dictionary["favourite_count"] as? Int) ?? 0
+            
             user = User.init(dictionary: dictionary.value(forKey: "user") as! NSDictionary)
         }
     }

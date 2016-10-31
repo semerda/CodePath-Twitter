@@ -212,6 +212,8 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true) // removes the highlight on cell when we come back
+        
         self.performSegue(withIdentifier: "TweetDetailSegue", sender: indexPath)
     }
     

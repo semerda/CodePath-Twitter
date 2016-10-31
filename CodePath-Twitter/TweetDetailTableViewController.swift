@@ -224,7 +224,7 @@ class TweetDetailTableViewController: UITableViewController {
         
         var originalTweetIdStr = ""
         if tweet?.retweetedStatusIsEmpty == true {
-            originalTweetIdStr = String("\(tweet?.identifier)")
+            originalTweetIdStr = String("\(tweet?.identifier)!")
         } else {
             originalTweetIdStr = (tweet?.retweetedStatusId)!
         }
