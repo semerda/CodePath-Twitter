@@ -38,7 +38,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/semerda/CodePath-Twitter/blob/master/Assets/twitter-anim-v1.gif' title='Kraken Twitter Video Walkthrough' width='' alt='Kraken Twitter Video Walkthrough' loop=infinite />
+<img src='https://github.com/semerda/CodePath-Twitter/blob/master/twitter-anim-v1.gif' title='Kraken Twitter Video Walkthrough' width='' alt='Kraken Twitter Video Walkthrough' loop=infinite />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
